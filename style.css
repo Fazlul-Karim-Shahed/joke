@@ -1,0 +1,47 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+body{
+    background-color: rgb(114, 219, 219);
+}
+
+#heading{
+    text-align: center;
+}
+
+.body{
+    background-color: #EEE;
+    padding: 20px;
+    margin: 5px 20px;
+    border-radius: 10px;
+}
+
+.input_div{
+    text-align: center;
+}
+#btn:hover{
+    background-color: crimson;
+    color: white;
+    transition: .5s;
+}
+.myList{
+    padding: 20px;
+}
+
+ol li:not(:last-child){
+    border-bottom: chartreuse 1px solid;
+}
+
+.footer{
+    text-align: center;
+    position: fixed;
+    color: white;
+    padding-top: 2vh;
+    bottom: -1px;
+    height: 9vh;
+    width: 100%;
+    background-color: black;
+}
