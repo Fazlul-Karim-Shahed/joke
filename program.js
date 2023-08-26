@@ -1,46 +1,43 @@
 
 document.getElementById("btn").addEventListener("click", jokes);
 
-function jokes(){
+function jokes() {
 
 
     var number = Number(document.getElementById("txt").value);
-    if(number == ""){
-        window.alert("Please enter any number")
+    console.log(number, typeof (number))
+    if (number == "" || number == 0) {
+        number = 1
     }
 
-    else {
-            var xhr = new XMLHttpRequest();
-        xhr.open("GET", `https://api.icndb.com/jokes/random/${number}`, true)
+    fetch(`https://v2.jokeapi.dev/joke/Any?amount=${number}`).then(res => res.json().then(data => {
 
-        xhr.onreadystatechange = function(){
+        console.log(data)
 
-            if(this.readyState === 3){
-                document.querySelector(".myList").innerHTML = "<h3>Request received<br>Data loading...</h3>"
-            }
+        var jokes = data.jokes
 
-            if(this.readyState === 4){
-                var text = JSON.parse(this.responseText)
-                
-                var ol = "<ol>"
+        var ol = "<ol>"
 
-                for(var i=0; i<number; i++){
-                    var data = text.value[i].joke;
-                    ol += `<li>${data}</li>`
-                }
-
-                ol += "</ol>"
-                document.querySelector(".myList").innerHTML = ol;
-                document.getElementById("txt").value = ""
-            }
-
+        if (number === 1) {
+            ol += `<li><h3>${data.setup}</h3> <h6>${data.delivery}</h6></li>`
         }
-        xhr.send()
-    }
+        else {
+            jokes.forEach(item => {
+
+                ol += `<li><h3>${item.setup}</h3> <h6>${item.delivery}</h6></li>`
+
+            });
+        }
+
+        ol += "</ol>"
+        document.querySelector(".myList").innerHTML = ol;
+        document.getElementById("txt").value = ""
+
+    }))
 
 }
 
-document.getElementById("clear").addEventListener("click", function(){
+document.getElementById("clear").addEventListener("click", function () {
 
     document.querySelector(".myList").innerHTML = ""
 
