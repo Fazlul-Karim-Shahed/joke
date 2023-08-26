@@ -1,45 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" crossorigin="anonymous" />
-    <title>Document</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
 
-    <h2 id="heading">Need Laugh?</h2>
-    
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+            integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
+            crossorigin="anonymous"
+        />
+        <title>Document</title>
+    </head>
+    <body>
+        <h2 style="margin-top: 40px" id="heading">Need Laugh?</h2>
 
-    <div class="body">
-        <div class="input_div">
-            <input placeholder="enter number of jokes" id="txt" type="number">
-            <button id="btn">Submit</button>
-            <button id="clear">Clear all</button>
-            <div id="translate"></div>
+        <div class="body">
+            <div class="input_div">
+                <input
+                    placeholder="enter number of jokes"
+                    id="txt"
+                    type="number"
+                />
+                <button id="btn">Submit</button>
+                <button id="clear">Clear all</button>
+                <div id="translate"></div>
 
-            <script type="text/javascript">
-            function googleTranslateElementInit() {
-            new google.translate.TranslateElement({pageLanguage: 'en'}, 'translate');
-            }
-            </script>
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement(
+                            { pageLanguage: "en" },
+                            "translate"
+                        );
+                    }
+                </script>
 
-            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                <script
+                    type="text/javascript"
+                    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+                ></script>
+            </div>
+
+            <div class="myList"></div>
         </div>
 
-        <div class="myList">
-            
+        <div class="footer">
+            Copyright@ All right reserved
+            <a href="https://fazlul-karim.web.app/" target="_blank"
+                >Fazlul karim</a
+            >
         </div>
-    </div>
 
-    <div class="footer">
-        copyright@ All right reserved Fazlul karim
-    </div>
-
-
-    <script src="program.js"></script>
-
-</body>
+        <script src="program.js"></script>
+    </body>
 </html>

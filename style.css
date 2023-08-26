@@ -5,7 +5,7 @@
     
 }
 body{
-    background-color: rgb(114, 219, 219);
+    /* background-color: #b2eec5; */
 }
 
 #heading{
@@ -13,10 +13,11 @@ body{
 }
 
 .body{
-    background-color: #EEE;
+    background-color: rgba(238, 238, 238, .4);
     padding: 20px;
     margin: 5px 20px;
     border-radius: 10px;
+    border: 1px dotted black;
 }
 
 .input_div{
@@ -37,11 +38,8 @@ ol li:not(:last-child){
 
 .footer{
     text-align: center;
-    position: fixed;
     color: white;
-    padding-top: 2vh;
-    bottom: -1px;
-    height: 9vh;
-    width: 100%;
+    padding: 20px;
+    margin-top: 70px;
     background-color: black;
 }
